@@ -27,3 +27,5 @@ rev2.columns = rev2.columns.get_level_values(1)
 rev2 = rev2.set_index('주요재무정보')
 rev2 = rev2.T
 rev2['매출액'].plot.bar()
+abcd = df
+abcd.set_index('영업이익(억)')
