@@ -1,5 +1,5 @@
-import pandas as pd #pandas 다운로드
-import datetime as dt #datetime 다운로드
+import pandas as pd #pandas 가져오기
+import datetime as dt #datetime 가져오기
 
 df = pd.DataFrame({'topic':['test'], 'body':['test body'], 'target_date':[dt.datetime.now()], 'created_date':[dt.datetime.now()]})
 
@@ -14,7 +14,7 @@ def read():
 
 def update(topic, body, target_date):
     global df
-    select_row = df[df.topic==topic].index
+    select_row = df[df.topic==topic].index #고르기
     df.loc[select_row, 'body'] = body #새로 다시 저장
     df.loc[select_row, 'target_date'] = target_date #새로 다시 저장
 
