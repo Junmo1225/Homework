@@ -7,7 +7,7 @@ class db_pd():
         self.df = pd.DataFrame({'topic':['test'], 'body':['test body'], 
                            'target_date':[dt.datetime.now()], 
                            'created_date':[dt.datetime.now()]})
-
+        self.df = pd.DataFrame(columns = ['topic', 'body', 'target_date', 'created_date'])
     def create(self, topic, body, target_date):
         new_data = {'topic':topic, 'body':body, 'target_date':target_date,
                     'created_date':dt.datetime.now()}
